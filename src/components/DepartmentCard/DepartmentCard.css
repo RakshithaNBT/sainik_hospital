@@ -1,0 +1,121 @@
+.hospital-dept-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  border-radius: var(--radius-md) !important;
+  border: 1px solid var(--color-border) !important;
+  box-shadow: var(--shadow-sm);
+  background: var(--color-white);
+  /* Override default transition to avoid fighting with Framer Motion's transform updates */
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.hospital-dept-card:hover {
+  box-shadow: 0 15px 35px rgba(13, 58, 39, 0.15);
+  border-color: var(--color-primary-light) !important;
+}
+
+.dept-image-wrapper {
+  position: relative;
+  height: 210px;
+  overflow: visible;
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
+  transform: translateZ(25px);
+  transform-style: preserve-3d;
+}
+
+.dept-img-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
+  background-color: var(--color-primary-dark);
+}
+
+.dept-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hospital-dept-card:hover .dept-img {
+  transform: scale(1.06);
+}
+
+/* Floating badge for specialty icon */
+.dept-icon-floating-badge {
+  position: absolute;
+  bottom: -22px;
+  right: 22px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(13, 58, 39, 0.3);
+  border: 3px solid var(--color-white);
+  z-index: 10;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.5s ease;
+  transform: translateZ(45px);
+}
+
+.hospital-dept-card:hover .dept-icon-floating-badge {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary-light) 100%);
+  transform: translateZ(45px) rotate(360deg);
+}
+
+/* Card Body */
+.dept-card-body {
+  padding: 30px 25px 25px 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform-style: preserve-3d;
+  transform: translateZ(20px);
+}
+
+.dept-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 12px;
+  transform: translateZ(35px);
+}
+
+.dept-card-desc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  transform: translateZ(25px);
+}
+
+.btn-dept-readmore {
+  background: transparent;
+  border: none;
+  color: var(--color-primary-light);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: var(--transition-fast);
+  transform: translateZ(30px);
+}
+
+.btn-dept-readmore:hover {
+  color: var(--color-secondary);
+  padding-left: 5px;
+}

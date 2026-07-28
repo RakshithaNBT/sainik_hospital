@@ -1,0 +1,43 @@
+.counter-item-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(20, 83, 60, 0.12);
+  box-shadow: 0 4px 15px rgba(13, 58, 39, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.counter-item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(20, 83, 60, 0.12);
+  border-color: var(--color-primary-light);
+}
+
+.animated-counter-number {
+  font-family: var(--font-primary);
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: var(--color-primary-dark);
+  line-height: 1;
+  display: inline-block;
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 6px;
+}
+
+.counter-label-text {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .animated-counter-number {
+    font-size: 1.8rem;
+  }
+  .counter-label-text {
+    font-size: 0.95rem;
+  }
+}

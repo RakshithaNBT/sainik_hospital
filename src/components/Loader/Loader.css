@@ -1,0 +1,53 @@
+.hospital-loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loader-content-wrapper {
+  max-width: 300px;
+}
+
+.loader-svg-box {
+  display: inline-block;
+  filter: drop-shadow(0 8px 20px rgba(13, 58, 39, 0.15));
+}
+
+.loader-brand-title {
+  color: var(--color-primary-dark);
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  margin-bottom: 2px;
+}
+
+.loader-brand-subtitle {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--color-secondary) !important;
+}
+
+.loader-progress-bar-bg {
+  width: 140px;
+  height: 3px;
+  background-color: var(--color-border);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.loader-progress-bar-fill {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
+}

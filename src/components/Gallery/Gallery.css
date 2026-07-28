@@ -1,0 +1,219 @@
+.hospital-gallery-widget {
+  position: relative;
+  width: 100%;
+}
+
+/* Category Filter Buttons */
+.btn-gallery-filter {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary-dark);
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-bounce);
+}
+
+.btn-gallery-filter:hover,
+.btn-gallery-filter.active {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 4px 15px rgba(13, 58, 39, 0.2);
+}
+
+/* Thumbnail Card */
+.gallery-thumbnail-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  height: 280px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-primary-dark);
+}
+
+.thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-thumbnail-card:hover .thumbnail-img {
+  transform: scale(1.1) rotate(1deg);
+}
+
+/* Hover Overlay */
+.thumbnail-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(13, 58, 39, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition-normal);
+  padding: 20px;
+}
+
+.gallery-thumbnail-card:hover .thumbnail-hover-overlay {
+  opacity: 1;
+}
+
+.overlay-info {
+  text-align: center;
+  color: var(--color-white);
+  transform: translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-thumbnail-card:hover .overlay-info {
+  transform: translateY(0);
+}
+
+.eye-icon {
+  color: var(--color-secondary);
+}
+
+.overlay-info h5 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 5px;
+}
+
+.category-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--color-secondary-light);
+}
+
+/* Lightbox overlay styling */
+.gallery-lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(5, 21, 14, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2200;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.close-lightbox-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  z-index: 2220;
+}
+
+.close-lightbox-btn:hover {
+  color: var(--color-emergency);
+  transform: rotate(90deg);
+}
+
+/* Navigation arrows */
+.lightbox-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  z-index: 2210;
+}
+
+.lightbox-nav-arrow:hover {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border-color: var(--color-secondary);
+}
+
+.lightbox-nav-arrow.left {
+  left: 40px;
+}
+
+.lightbox-nav-arrow.right {
+  right: 40px;
+}
+
+/* Lightbox Content frame */
+.lightbox-content-frame {
+  max-width: 900px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background-color: var(--color-primary-dark);
+}
+
+.lightbox-main-img {
+  max-width: 100%;
+  max-height: 68vh;
+  object-fit: contain;
+}
+
+.lightbox-caption-box {
+  width: 100%;
+  background: #082116;
+  padding: 20px 25px;
+  color: var(--color-white);
+}
+
+.lightbox-caption-box h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 5px;
+}
+
+.lightbox-caption-box p {
+  font-size: 0.88rem;
+}
+
+@media (max-width: 768px) {
+  .lightbox-nav-arrow {
+    width: 45px;
+    height: 45px;
+  }
+  .lightbox-nav-arrow.left {
+    left: 15px;
+  }
+  .lightbox-nav-arrow.right {
+    right: 15px;
+  }
+  .gallery-thumbnail-card {
+    height: 180px;
+  }
+}

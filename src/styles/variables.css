@@ -1,0 +1,42 @@
+:root {
+  /* Color Palette matching official Sainik Hospital Mysuru Emblem */
+  --color-primary-dark: #2C3A1A;       /* Deep Olive Green (Logo Outer Ring) */
+  --color-primary: #3B4E23;            /* Primary Emblem Olive Green */
+  --color-primary-light: #4A622C;      /* Medium Olive Army Green */
+  --color-secondary: #5E7D37;          /* Bright Leaf Olive Green */
+  --color-secondary-light: #7B9F4C;    /* Soft Olive Leaf Accent */
+  --color-secondary-tint: #E2EBD5;     /* Light Creamy Olive Tint */
+  --color-accent: #EFF4E7;             /* Soft Olive Accent BG */
+  --color-bg-light: #F7F9F4;           /* Hospital Background Tint */
+  --color-white: #FFFFFF;              /* Pure White */
+  --color-text-dark: #232B19;          /* Primary Dark Text */
+  --color-text-muted: #556049;         /* Muted Subtitles */
+  --color-text-light: #F7F9F4;         /* Light Text on Dark Backgrounds */
+  --color-border: #E1E8D7;             /* Light Border Color */
+  --color-emergency: #D90429;          /* Red Emergency Color */
+  --color-emergency-hover: #EF233C;    /* Bright Emergency Red */
+  --color-warning: #FFB703;            /* Yellow Alert */
+
+  /* Typography */
+  --font-primary: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-secondary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Shadows tuned to Olive Green tint */
+  --shadow-sm: 0 4px 6px -1px rgba(59, 78, 35, 0.05), 0 2px 4px -1px rgba(59, 78, 35, 0.02);
+  --shadow-md: 0 10px 15px -3px rgba(59, 78, 35, 0.08), 0 4px 6px -2px rgba(59, 78, 35, 0.04);
+  --shadow-lg: 0 20px 25px -5px rgba(59, 78, 35, 0.12), 0 10px 10px -5px rgba(59, 78, 35, 0.04);
+  --shadow-hover: 0 25px 50px -12px rgba(59, 78, 35, 0.2);
+
+  /* Borders & Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-round: 50%;
+
+  /* Transitions */
+  --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

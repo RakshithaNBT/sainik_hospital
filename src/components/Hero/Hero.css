@@ -1,0 +1,314 @@
+.hero-swiper-section {
+  position: relative;
+  width: 100vw;
+  height: 85vh;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.hero-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide-item {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Slide Content text adjustments */
+.hero-text-content {
+  max-width: 720px;
+  z-index: 10;
+  padding-top: 130px;
+  padding-bottom: 50px;
+}
+
+.hero-badge {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-family: var(--font-primary);
+  box-shadow: 0 4px 10px rgba(82, 183, 136, 0.2);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-desc {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Swiper navigation adjustments */
+.hero-swiper-section .swiper-button-prev,
+.hero-swiper-section .swiper-button-next {
+  color: var(--color-white);
+  width: 50px;
+  height: 50px;
+  background: rgba(13, 58, 39, 0.3);
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition-fast);
+}
+
+.hero-swiper-section .swiper-button-prev::after,
+.hero-swiper-section .swiper-button-next::after {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.hero-swiper-section .swiper-button-prev:hover,
+.hero-swiper-section .swiper-button-next:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-secondary);
+}
+
+.hero-swiper-section .swiper-pagination-bullet {
+  background: var(--color-white);
+  opacity: 0.5;
+  width: 10px;
+  height: 10px;
+  transition: var(--transition-normal);
+}
+
+.hero-swiper-section .swiper-pagination-bullet-active {
+  background: var(--color-secondary);
+  opacity: 1;
+  width: 25px;
+  border-radius: 5px;
+}
+
+/* Floating Highlights Card Grid */
+.hero-floating-highlights-wrapper {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  width: 100%;
+}
+
+.highlight-card-item {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  padding: 25px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  transition: var(--transition-normal);
+}
+
+.highlight-card-item:hover {
+  transform: translateY(-8px);
+  background: var(--color-white) !important;
+  border-color: var(--color-secondary-light) !important;
+  box-shadow: var(--shadow-hover);
+}
+
+.highlight-card-item .card-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.highlight-card-item h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 8px;
+}
+
+.highlight-card-item p {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+/* Appointment Modal Overlay */
+.appointment-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(13, 58, 39, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.appointment-modal-content {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  position: relative;
+  padding: 40px 30px;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-close-x {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.modal-close-x:hover {
+  color: var(--color-emergency);
+  transform: rotate(90deg);
+}
+
+/* Appointment Form labels */
+.appointment-modal-content .form-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.appointment-modal-content .form-control,
+.appointment-modal-content .form-select {
+  border: 1px solid var(--color-border);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+.appointment-modal-content .form-control:focus,
+.appointment-modal-content .form-select:focus {
+  border-color: var(--color-secondary-light);
+  box-shadow: 0 0 10px rgba(82, 183, 136, 0.15);
+}
+
+/* Confirm view checkmark */
+.success-pulse-ring {
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(82, 183, 136, 0.4);
+  animation: pulse-ring-success 1.5s infinite alternate;
+}
+
+@keyframes pulse-ring-success {
+  0% { transform: scale(0.95); }
+  100% { transform: scale(1.05); }
+}
+
+.confirm-summary-box {
+  background-color: var(--color-accent);
+  padding: 20px;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-primary-dark);
+}
+
+.confirm-summary-box p {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.confirm-summary-box p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .hero-swiper-section {
+    height: auto;
+    min-height: 520px;
+  }
+  .hero-text-content {
+    padding-top: 110px;
+    padding-bottom: 40px;
+    text-align: center !important;
+    margin: 0 auto;
+  }
+  .hero-badge {
+    display: inline-block;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-desc {
+    font-size: 0.95rem;
+  }
+  .hero-action-buttons {
+    justify-content: center !important;
+  }
+  .hero-floating-highlights-wrapper {
+    position: relative;
+    bottom: 0;
+    transform: none;
+    left: 0;
+    margin-top: -25px;
+    padding: 0 15px 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-swiper-section {
+    min-height: 480px;
+  }
+  .hero-text-content {
+    padding-top: 95px;
+    padding-bottom: 30px;
+  }
+  .hero-title {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+  .hero-desc {
+    font-size: 0.88rem;
+  }
+  .hero-action-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-action-buttons .btn-premium-primary,
+  .hero-action-buttons .btn-premium-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+  .highlight-card-item {
+    padding: 18px 15px;
+  }
+}
