@@ -5,6 +5,7 @@ import { FaCalendarCheck, FaAmbulance, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { doctors, departments } from '../../utils/dummyData';
 import CustomSelect from '../CustomSelect/CustomSelect';
+import { getPublicUrl } from '../../utils/publicUrl';
 import './Hero.css';
 
 // Import Swiper styles
@@ -82,7 +83,7 @@ const Hero = () => {
         >
           {slidesData.map((slide) => (
             <SwiperSlide key={slide.id}>
-              <div className="hero-slide-item" style={{ backgroundImage: `linear-gradient(rgba(13, 58, 39, 0.55), rgba(0, 0, 0, 0.70)), url(${slide.image})` }}>
+              <div className="hero-slide-item" style={{ backgroundImage: `linear-gradient(rgba(13, 58, 39, 0.55), rgba(0, 0, 0, 0.70)), url(${getPublicUrl(slide.image)})` }}>
                 <div className="container h-100 d-flex align-items-center">
                   <div className="hero-text-content text-start">
                     <motion.span 
