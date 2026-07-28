@@ -7,6 +7,7 @@
  */
 export const getPublicUrl = (path) => {
   if (!path) return '';
+  if (typeof path !== 'string') return path;
   if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:')) {
     return path;
   }
