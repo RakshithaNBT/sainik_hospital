@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import FloatingActions from './components/FloatingActions/FloatingActions';
@@ -33,7 +33,7 @@ function App() {
   }
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <div className="App d-flex flex-column min-vh-100 position-relative">
         <ScrollToTop />
         <Navbar />

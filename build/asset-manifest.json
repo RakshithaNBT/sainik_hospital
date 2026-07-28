@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sainik_hospital/static/css/main.b6592307.css",
-    "main.js": "/sainik_hospital/static/js/main.87b53089.js",
+    "main.js": "/sainik_hospital/static/js/main.70640718.js",
     "static/js/453.3cbb1e64.chunk.js": "/sainik_hospital/static/js/453.3cbb1e64.chunk.js",
     "index.html": "/sainik_hospital/index.html",
     "main.b6592307.css.map": "/sainik_hospital/static/css/main.b6592307.css.map",
-    "main.87b53089.js.map": "/sainik_hospital/static/js/main.87b53089.js.map",
+    "main.70640718.js.map": "/sainik_hospital/static/js/main.70640718.js.map",
     "453.3cbb1e64.chunk.js.map": "/sainik_hospital/static/js/453.3cbb1e64.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b6592307.css",
-    "static/js/main.87b53089.js"
+    "static/js/main.70640718.js"
   ]
 }
