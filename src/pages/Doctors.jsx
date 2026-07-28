@@ -5,6 +5,7 @@ import DoctorCard from '../components/DoctorCard/DoctorCard';
 import { doctors, departments } from '../utils/dummyData';
 import EmergencyCTA from '../components/CTA/EmergencyCTA';
 import CustomSelect from '../components/CustomSelect/CustomSelect';
+import { getPublicUrl } from '../utils/publicUrl';
 
 const Doctors = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -87,7 +88,7 @@ const Doctors = () => {
                     <div className="row align-items-center gy-4">
                       <div className="col-md-4 text-center">
                         <img 
-                          src={selectedDoc.image} 
+                          src={getPublicUrl(selectedDoc.image)} 
                           alt={selectedDoc.name} 
                           className="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" 
                           style={{ maxHeight: '260px', objectPosition: 'top center' }} 

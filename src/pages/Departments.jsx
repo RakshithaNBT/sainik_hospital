@@ -4,6 +4,7 @@ import { FaSearch, FaCheckCircle, FaArrowLeft, FaCalendarCheck, FaPhoneAlt, FaAm
 import DepartmentCard from '../components/DepartmentCard/DepartmentCard';
 import { departments, doctors } from '../utils/dummyData';
 import EmergencyCTA from '../components/CTA/EmergencyCTA';
+import { getPublicUrl } from '../utils/publicUrl';
 
 const Departments = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -76,7 +77,7 @@ const Departments = () => {
                 <div className="col-lg-8">
                   <div className="rounded-4 overflow-hidden shadow-sm mb-4">
                     <img 
-                      src={selectedDept.image} 
+                      src={getPublicUrl(selectedDept.image)} 
                       alt={selectedDept.name} 
                       className="img-fluid w-100" 
                       style={{ maxHeight: '420px', objectFit: 'cover' }} 
@@ -109,7 +110,7 @@ const Departments = () => {
                           <div key={doc.id} className="col-md-6">
                             <div className="glass-card p-3 d-flex align-items-center gap-3 h-100">
                               <img 
-                                src={doc.image} 
+                                src={getPublicUrl(doc.image)} 
                                 alt={doc.name} 
                                 className="rounded-circle shadow-sm" 
                                 style={{ width: '75px', height: '75px', objectFit: 'cover' }} 
