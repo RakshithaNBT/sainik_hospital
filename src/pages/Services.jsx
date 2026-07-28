@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaCheckCircle, FaLaptopMedical, FaVial, FaAmbulance, FaShieldAlt, FaTimes } from 'react-icons/fa';
 import { healthPackages } from '../utils/dummyData';
 import EmergencyCTA from '../components/CTA/EmergencyCTA';
 
 const Services = () => {
-  const navigate = useNavigate();
   const [selectedPkg, setSelectedPkg] = useState(null);
   const [bookingSuccess, setBookingSuccess] = useState(false);
   const [patientName, setPatientName] = useState('');

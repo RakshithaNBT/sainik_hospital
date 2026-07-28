@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaEye, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { galleryItems } from '../../utils/dummyData';
+import { getPublicUrl } from '../../utils/publicUrl';
 import './Gallery.css';
 
 const Gallery = ({ limit = null }) => {
@@ -78,7 +79,7 @@ const Gallery = ({ limit = null }) => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="gallery-thumbnail-card" onClick={() => openLightbox(index)}>
-                  <img src={item.image} alt={item.title} className="thumbnail-img" loading="lazy" />
+                  <img src={getPublicUrl(item.image)} alt={item.title} className="thumbnail-img" loading="lazy" />
                   <div className="thumbnail-hover-overlay">
                     <div className="overlay-info">
                       <FaEye className="eye-icon mb-2" size={24} />
@@ -116,7 +117,7 @@ const Gallery = ({ limit = null }) => {
               key={lightboxIndex}
             >
               <img
-                src={itemsToDisplay[lightboxIndex].image}
+                src={getPublicUrl(itemsToDisplay[lightboxIndex].image)}
                 alt={itemsToDisplay[lightboxIndex].title}
                 className="lightbox-main-img"
               />

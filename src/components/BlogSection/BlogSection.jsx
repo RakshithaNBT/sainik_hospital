@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCalendarAlt, FaClock, FaArrowRight, FaBookOpen } from 'react-icons/fa';
 import { blogPosts } from '../../utils/blogData';
+import { getPublicUrl } from '../../utils/publicUrl';
 import './BlogSection.css';
 
 const BlogSection = () => {
@@ -36,7 +37,7 @@ const BlogSection = () => {
               >
                 <div>
                   <div className="blog-section-img-wrapper">
-                    <img src={post.image} alt={post.title} />
+                    <img src={getPublicUrl(post.image)} alt={post.title} />
                     <span className="blog-section-category">{post.category}</span>
                   </div>
 

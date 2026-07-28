@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube, FaArrowRight } from 'react-icons/fa';
 import { departments } from '../../utils/dummyData';
+import { getPublicUrl } from '../../utils/publicUrl';
 import './Footer.css';
 
 const Footer = () => {
@@ -20,7 +21,7 @@ const Footer = () => {
                 title="Return to Home Page"
               >
                 <img 
-                  src="/sainik-logo.jpg" 
+                  src={getPublicUrl('/sainik-logo.jpg')} 
                   alt="SAINIK Hospital Official Emblem" 
                   className="sainik-logo-img me-2" 
                   style={{ height: '55px', width: '55px', objectFit: 'contain', borderRadius: '50%' }} 

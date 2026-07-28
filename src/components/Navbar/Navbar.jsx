@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { FaAmbulance, FaSearch, FaBars, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getPublicUrl } from '../../utils/publicUrl';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -10,9 +11,6 @@ const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
-  const location = useLocation();
-
-  const isHomePage = location.pathname === '/';
 
   // Scroll Event Listener
   useEffect(() => {
@@ -69,7 +67,7 @@ const Navbar = () => {
               title="Return to Home Page"
             >
               <img 
-                src="/sainik-logo.jpg" 
+                src={getPublicUrl('/sainik-logo.jpg')} 
                 alt="SAINIK Hospital Official Emblem" 
                 className="sainik-logo-img me-2" 
                 style={{ height: '52px', width: '52px', objectFit: 'contain', borderRadius: '50%' }} 

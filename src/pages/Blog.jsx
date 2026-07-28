@@ -11,13 +11,13 @@ import {
   FaTimes,
   FaPhoneAlt, 
   FaStethoscope,
-  FaHospitalUser,
   FaChevronRight
 } from 'react-icons/fa';
 import { blogPosts, blogCategories } from '../utils/blogData';
 import { doctors } from '../utils/dummyData';
 import { processBlogSEOContent } from '../utils/seoLinker';
 import EmergencyCTA from '../components/CTA/EmergencyCTA';
+import { getPublicUrl } from '../utils/publicUrl';
 import './Blog.css';
 
 const Blog = () => {
@@ -116,7 +116,7 @@ const Blog = () => {
                   {/* Hero Featured Image */}
                   <div className="rounded-4 overflow-hidden mb-5 shadow-sm" style={{ maxHeight: '420px' }}>
                     <img
-                      src={selectedPost.image}
+                      src={getPublicUrl(selectedPost.image)}
                       alt={selectedPost.title}
                       className="w-100 h-100 object-fit-cover"
                     />
@@ -315,7 +315,7 @@ const Blog = () => {
                         transition={{ duration: 0.4, delay: idx * 0.1 }}
                       >
                         <div className="blog-card-img-wrapper">
-                          <img src={post.image} alt={post.title} />
+                          <img src={getPublicUrl(post.image)} alt={post.title} />
                           <span className="blog-category-badge">{post.category}</span>
                         </div>
 

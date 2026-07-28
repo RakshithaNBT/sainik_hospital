@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { getPublicUrl } from '../../utils/publicUrl';
 import './Loader.css';
 
 const Loader = () => {
@@ -20,7 +21,7 @@ const Loader = () => {
           }}
         >
           <img 
-            src="/sainik-logo.jpg" 
+            src={getPublicUrl('/sainik-logo.jpg')} 
             alt="SAINIK Hospital Official Emblem" 
             style={{ width: '90px', height: '90px', objectFit: 'contain', borderRadius: '50%', boxShadow: '0 4px 20px rgba(82, 183, 136, 0.4)' }} 
           />

@@ -11,6 +11,7 @@ import Testimonials from '../components/Testimonials/Testimonials';
 import Gallery from '../components/Gallery/Gallery';
 import BlogSection from '../components/BlogSection/BlogSection';
 import { departments, doctors, faqs, healthPackages } from '../utils/dummyData';
+import { getPublicUrl } from '../utils/publicUrl';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -119,7 +120,7 @@ const Home = () => {
             <div className="col-lg-6">
               <div className="about-image-stack position-relative p-2">
                 <img
-                  src="/banner/sainik-building-banner.png"
+                  src={getPublicUrl('/banner/sainik-building-banner.png')}
                   alt="SAINIK Multi-Speciality Hospital Main Building"
                   className="img-fluid rounded-4 shadow-lg w-100 about-building-portrait-img"
                 />

@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
+import { getPublicUrl } from '../../utils/publicUrl';
 import './DepartmentCard.css';
 
 const DepartmentCard = ({ department, onReadMore }) => {
@@ -59,7 +60,7 @@ const DepartmentCard = ({ department, onReadMore }) => {
       >
         <div className="dept-image-wrapper">
           <div className="dept-img-container">
-            <img src={image} alt={name} className="dept-img" loading="lazy" />
+            <img src={getPublicUrl(image)} alt={name} className="dept-img" loading="lazy" />
           </div>
           <div className="dept-icon-floating-badge">
             <IconComponent size={24} />

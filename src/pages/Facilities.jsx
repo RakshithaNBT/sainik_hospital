@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaCheckCircle, FaPhoneAlt, FaMicroscope, FaNotesMedical, FaPills } from 'react-icons/fa';
 import { hospitalFacilities } from '../utils/dummyData';
 import EmergencyCTA from '../components/CTA/EmergencyCTA';
+import { getPublicUrl } from '../utils/publicUrl';
 
 const Facilities = () => {
   const allServicesList = [
@@ -68,7 +69,7 @@ const Facilities = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <img 
-                    src={facility.image} 
+                    src={getPublicUrl(facility.image)} 
                     alt={facility.title} 
                     className="facility-card-img" 
                     style={{ width: '100%', maxWidth: '210px', objectFit: 'cover' }} 

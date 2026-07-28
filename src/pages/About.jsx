@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaShieldAlt, FaEye, FaBullseye, FaAward, FaHeartbeat, FaCheckCircle, FaUserCheck, FaMicroscope } from 'react-icons/fa';
+import { FaShieldAlt, FaEye, FaBullseye, FaAward, FaUserCheck, FaMicroscope } from 'react-icons/fa';
 import EmergencyCTA from '../components/CTA/EmergencyCTA';
+import { getPublicUrl } from '../utils/publicUrl';
 
 const About = () => {
   return (
@@ -76,7 +76,7 @@ const About = () => {
           <div className="row align-items-center gy-4 text-start">
             <div className="col-lg-6">
               <img
-                src="/modular-ot.jpg"
+                src={getPublicUrl('/modular-ot.jpg')}
                 alt="Modular Operation Theatre"
                 className="img-fluid rounded-4 shadow-lg w-100"
               />

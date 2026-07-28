@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaGraduationCap, FaCalendarAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { getPublicUrl } from '../../utils/publicUrl';
 import './DoctorCard.css';
 
 const DoctorCard = ({ doctor, onViewProfile }) => {
@@ -25,7 +26,7 @@ const DoctorCard = ({ doctor, onViewProfile }) => {
       style={{ cursor: 'pointer' }}
     >
       <div className="doc-image-wrapper">
-        <img src={image} alt={name} className="doc-img" loading="lazy" />
+        <img src={getPublicUrl(image)} alt={name} className="doc-img" loading="lazy" />
         <div className="doc-experience-badge">
           {experience}
         </div>

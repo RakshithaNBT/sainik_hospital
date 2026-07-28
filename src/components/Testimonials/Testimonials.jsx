@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { FaQuoteLeft, FaStar } from 'react-icons/fa';
 import { testimonials } from '../../utils/dummyData';
+import { getPublicUrl } from '../../utils/publicUrl';
 import './Testimonials.css';
 
 // Import Swiper styles
@@ -57,7 +58,7 @@ const Testimonials = () => {
                 <p className="patient-comment">"{test.comment}"</p>
 
                 <div className="patient-info-row mt-4">
-                  <img src={test.avatar} alt={test.name} className="patient-avatar" loading="lazy" />
+                  <img src={getPublicUrl(test.avatar)} alt={test.name} className="patient-avatar" loading="lazy" />
                   <div className="patient-text-block text-start">
                     <h5 className="patient-name">{test.name}</h5>
                     <span className="patient-relation">{test.relation}</span>
